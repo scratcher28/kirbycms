@@ -93,7 +93,7 @@ class site extends obj {
     if($page->isErrorPage()) {
       
       // get the subfolder in which the site is running
-      $subfolder = ltrim(dirname(server::get('script_name')), '/');
+      $subfolder = ltrim(dirname(server::get('script_name')), '/\\');
       
       // if it is running in a subfolder and it does not match the config
       // send an error with some explanations how to fix that
